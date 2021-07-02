@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#title {
+  width: 100%;
+  padding-top: 30px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  background-color: white;
+}
+#scroll-bar {
+  width: 0;
+  height: 5px;
+  background-color: rgb(247, 136, 154);
+  position: absolute;
+}
+#content {
+  width: 1000px;
+  margin: 100px auto;
+  height: 1000vh;
+  background-color: rgb(255, 255, 210);
+  padding-top: 30px;
+}
