@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <title>MOMENTUM</title>
+  
+</head>
+<body>
+  <div id="bg">
+    <img class="bg" src="">
+  </div>
+  <div id="wrap">
+    <header id="header">
+      <form id="loginForm">
+        <input required maxlength="5" type="text" placeholder="">
+        <button class="hidden">Log-In</button>
+      </form>
+      <h1>님 어서오세요</h1>
+      <button id="logout"><i class="fas fa-sign-out-alt"></i></button>
+    </header>
+    <div class="mail">
+      <button id="mail"><i class="fas fa-envelope"></i></button>
+    </div>
+    <main id="clock">
+      <h2>0000 - 00 - 00</h2>
+      <h1>00 : 00 : 00</h1>
+    </main>
+    <section>
+      <div class="todo">
+        <form id="todoForm">
+          <input type="text" placeholder="할일을 입력하세요" required>
+        </form>
+        <ul id="todoList"></ul>
+      </div>
+      <div class="calender"></div>
+      <div class="weather"></div>
+      <div class="quote">
+        <h2></h2>
+        <h3></h3>
+      </div>
+    </section>
+    <div class="mailform">
+      <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzaebNv-WRymBFAeAFhwqdRZW4L6f_nn4vJGIZdP0AsM0F6Z3_3ArLgFIXAl8qtLVPs/exec">
+        <input type="text" id="name" name="name" placeholder="name">
+        <input type="text" id="email" name="email" placeholder="email">
+        <textarea id="message" name="message"></textarea>
+        <button type="submit" id="submit">보내기</button>
+        <button type="button" id="exit">닫기</button>
+        <div style="display:none;" class="thankyou_message">
+          
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script src="script/login.js"></script>
+  <script src="script/clock.js"></script>
+  <script src="script/quotes.js"></script>
+  <script src="script/todolist.js"></script>
+  <script src="script/bg.js"></script>
+  <script src="script/weather.js"></script>
+  <script src="script/mail.js"></script>
+  <script src="script/form-submission-handler.js"></script>
+
+</body>
+</html>

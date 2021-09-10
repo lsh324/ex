@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextEditer</title>
+  <link rel="stylesheet" href="txtedi.css">
+  <script src="https://kit.fontawesome.com/67d4b74cab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="toolbar">
+      <div class="zoom">
+        <button id="zoom-out" type="button">-</button>
+        <span class="zoom-rate">100</span>%
+        <button id="zoom-in" type="button">+</button>
+      </div>
+      <div class="font-style">
+        <select id="font" name="font">
+          <option value="굴림">굴림</option>
+          <option value="굴림체">굴림체</option>
+          <option value="돋움">돋움</option>
+          <option value="돋움체">돋움체</option>
+          <option value="궁서">궁서</option>
+          <option value="궁서체">궁서체</option>
+          <option value="Arial">Arial</option>
+        </select>
+        <select name="font-size" id="font-size">
+          <option value="9">9pt</option>
+          <option value="10">10pt</option>
+          <option value="12">12pt</option>
+          <option value="14">14pt</option>
+          <option value="18">18pt</option>
+          <option value="24">24pt</option>
+          <option value="36">36pt</option>
+        </select>
+      </div>
+      <div class="text-decoration">
+        <button id="bold" type="button">가</button>
+        <button id="underline" type="button">가</button>
+        <button id="italic" type="button">가</button>
+        <button id="line-through" type="button">가</button>
+      </div> 
+      <div class="text-align">
+        <button id="left" type="button"></button>
+        <button id="center" type="button"></button>
+        <button id="right" type="button"></button>
+      </div>
+      <div class="color">
+        <input value="#ffcdcd" type="color" name="text-color" id="text-color" name="text-color"></input>
+        <label for="text-color">글자색</label>
+        <input value="#f6b73c" type="color" name="background-color" id="background-color"></input>
+        <label for="background-color">배경색</label>
+      </div>
+    </div>
+    <div contenteditable="true" class="text-area">
+    </div>
+  </div>
+  <script src="txtedi.js"></script>
+</body>
+</html>

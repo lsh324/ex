@@ -1,0 +1,262 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+ul, li{
+  list-style: none;
+}
+body{
+  color: #fff;
+}
+.hidden{
+  display: none;
+}
+i:hover{
+  transform: scale(1.2);
+}
+#wrap{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: 'Pretendard-Regular';
+}
+.bg{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+.bg img{
+  width: 100%;
+  height: 100%;
+}
+/* 헤더 */
+#header{
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(239, 239, 239, 0.1);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+#header .login{
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(239, 239, 239, 0.1);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+#header #loginForm{
+  width: 30%;
+  margin: auto;
+}
+#header #loginForm input{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  background: none;
+  font-size: 3em;
+  display: block;
+  margin-left: 20px;
+}
+#header h1{
+  width: 70%;
+  font-size: 3em;
+}
+#header button{
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  border: none;
+  background: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+/* 메일 */
+.mail{
+  width: 5%;
+  height: 5%;
+  position: relative;
+  top: 30px;
+  left: 1%;
+  
+}
+.mail button{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.3);
+  color: #fff;
+  line-height: 30px;
+  cursor: pointer;
+}
+/* 메일폼 */
+.mailform{
+  width: 25%;
+  height: 55%;
+  position: fixed;
+  left: 5%;
+  top: 10%;
+  background-color:rgba(255, 255, 255, 0.2);
+  display: none;
+}
+.mailform .gform{
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+}
+.mailform .gform input:nth-child(1){
+  width: 130px;
+  height: 20px;
+}
+.mailform .gform input:nth-child(2){
+  width: 250px;
+  height: 20px;
+}
+.mailform .gform textarea{
+  width: 400px;
+  height: 400px;
+}
+.mailform .gform button{
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 50px;
+  height: 30px;
+}
+#submit{
+  right: 25%;
+}
+/* clock */
+#clock{
+  position: absolute;
+  width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 200px;
+  top: 200px;
+  text-align: center;
+}
+#clock h2{
+  font-size: 3em;
+}
+#clock h1{
+  font-size: 7em;
+}
+/* 섹션 */
+section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  position: absolute;
+  width: 100%;
+  height: 450px;
+  top: 450px;
+}
+section .todo{
+  width: 25%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 4px rgba(73, 73, 73, 0.25);
+  border-radius: 15px;
+}
+section .todo #todoForm input{
+  display: block;
+  width: 80%;
+  border: none;
+  border-bottom: solid 1px #333;
+  background: none;
+  font-size: 2em;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-family: 'Pretendard-Regular';
+  
+}
+section .todo #todoForm input::placeholder{
+  color: #fff;
+  font-family: 'Pretendard-Regular';
+}
+section .todo ul{
+  margin: 30px;
+}
+section .todo li{
+  font-size: 1.5em;
+  line-height: 2em;
+}
+section .todo li button{
+  width: 30px;
+  height: 30px;
+  font-size: 1em;
+  border: none;
+  background: none;
+  margin-right: 20px;
+  color: rgb(255, 103, 103);
+  cursor: pointer;
+}
+section .calender{
+  width: 40%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 4px rgba(73, 73, 73, 0.25);
+  border-radius: 15px;
+}
+
+section .weather{
+  width: 25%;
+  height: 45%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 4px rgba(73, 73, 73, 0.25);
+  border-radius: 15px;
+}
+
+section .quote{
+  width: 25%;
+  height: 45%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 4px rgba(73, 73, 73, 0.25);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  justify-content: center;
+  align-items: flex-end;
+}
+section .quote h2{
+  font-size: 1.5em;
+  margin: 0 20px;
+}
+section .quote h3{
+  font-size: 1em;
+  margin: 0 20px;
+}

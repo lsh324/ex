@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+/***web font ***/
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+*{
+  font-size: 0;
+}
+body{
+  font-family: 'Electrolize';
+}
+#wrapper{
+  width: 100vw;
+  height: 100vh;
+  perspective: 2000px;
+}
+
+/*************메뉴*****************/
+.btn-menu{
+  z-index: 11;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+
+#main-menu{
+  width: 200px;
+  height: 100vh;
+  background-color: #eee;
+  z-index: 10;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left center;
+  transition: all .5s;
+  transform: rotateY(15deg);
+}
+#main-menu.on{
+  transform: rotateY(120deg);
+}
+#main-menu > .logo{
+  width: 200px;
+  margin: 100px auto;
+}
+#main-menu img{
+  display: block;
+  width: 100%;
+}
+#main-menu .gnb li{
+  line-height: 5rem;
+}
+#main-menu .gnb a{
+  color: #222;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+/***container*/
+#container{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  transform-origin: right center;
+  transition: all .5s;
+}
+#container.on{
+  transform: rotateY(-10deg);
+}
+#container > div{
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  position: fixed;
+  opacity: 0;
+  transition: all .5s;
+}
+#container > div.on{
+  opacity: 1;
+  z-index: 13;
+}
+#container > div > p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transform: rotateY(180deg);
+  transition: all .54s;
+}
+#container > div.on > p{
+  transform: rotateY(0deg);
+}
+
+#container > .f911 > p:nth-child(1){
+  grid-column: 1/3;
+  font-size: 80pt;
+  background-color: #2a2a2a;
+  font-family: 'Audiowide';
+  font-weight: bold;
+}
+#container > .f911 > p:nth-child(2){
+  background-image: url(images/911/911_03.jpg);
+  background-size: cover;
+}
+#container > .f911 > p:nth-child(3){
+  background-color: rgb(53, 53, 53);
+}
+#container > .f911 > p:nth-child(4){
+  background-color: #b5b5b5;
+}
+#container > .f911 > p:nth-child(5){
+  background-image: url(images/911/911_06.jpg);
+  background-size: cover;
+}
+#container > .f911 > p:nth-child(6){
+  background-image: url(images/911/911_13.jpg);
+  background-size: cover;
+}
+#container > .f911 > p:nth-child(7){
+  background-color: #3e3e3e;
+}
+#container > .f911 > p:nth-child(8){
+  grid-column: 3/5;
+  grid-row: 2/4;
+  background-image: url(images/911/911_11.jpg);
+  background-size: cover;
+}
+#container > .f911 > p:nth-child(9){
+  background-color: #3e3e3e;
+}
+#container > .f911 > p:nth-child(10){
+  grid-column: 2/4;
+  background-image: url(images/911/911_15.jpg);
+  background-size: cover;
+}
+#container > .f911 > p:nth-child(11){
+  background-color: #000;
+}
+/************************* macan *****************/
+
+#container > .macan > p:nth-child(1){
+  font-size: 30px;
+  background-color: #2f2f2f;
+}
+#container > .macan > p:nth-child(1) i{
+  padding: 20px;
+  transition: all .3s;
+}
+#container > .macan > p:nth-child(1) i:nth-child(1):hover{
+  color: rgb(255, 229, 173);
+  transform: scale(1.5);
+}
+#container > .macan > p:nth-child(1) i:nth-child(2):hover{
+  color: rgb(71, 130, 238);
+  transform: scale(1.5);
+}
+#container > .macan > p:nth-child(1) i:nth-child(3):hover{
+  color: rgb(211, 58, 58);
+  transform: scale(1.5);
+  
+}
+#container > .macan > p:nth-child(2){
+  background-image: url(images/macan/macan_02.jpg);
+  background-size: cover;
+}
+#container > .macan > p:nth-child(3){
+  grid-column: 3/5;
+  font-size: 80pt;
+  background-color: #000;
+  font-family: 'Audiowide';
+  font-weight: bold;
+}
+#container > .macan > p:nth-child(4){
+  grid-row: 2/4;
+  background-image: url(images/macan/macan_07.jpg);
+  background-size: cover;
+}
+#container > .macan > p:nth-child(5){
+  grid-column: 2/4;
+  grid-row: 2/4;
+  background-image: url(images/macan/macan_09.jpg);
+  background-size: cover;
+}
+#container > .macan > p:nth-child(6){
+  background-image: url(images/macan/macan_05.jpg);
+  background-size: cover;
+}
+#container > .macan > p:nth-child(7){
+  background-color: #434343;
+}
+#container > .macan > p:nth-child(8){
+  background-image: url(images/macan/macan_11.jpg);
+  background-size: cover;
+}
+#container > .macan > p:nth-child(9){
+  background-color: #434343;
+}
+#container > .macan > p:nth-child(10){
+  background-image: url(images/macan/macan_15.jpg);
+  background-size: cover;
+}
+#container > .macan > p:nth-child(11){
+  background-image: url(images/macan/macan_13.jpg);
+  background-size: cover;
+}
+/******************** 718 ******************/
+
+#container > .f718 > p:nth-child(1){
+  grid-column: 1/3;
+  grid-row: 1/5;
+  background-image: url(images/718/718_01.jpg);
+  background-size: cover;
+}
+#container > .f718 > p:nth-child(2){
+  background-color: #555555;
+}
+#container > .f718 > p:nth-child(3){
+  background-image: url(images/718/718_04.jpg);
+  background-size: cover;
+}
+#container > .f718 > p:nth-child(4){
+  grid-column: 3/5;
+  background-color: #000;
+  font-size: 80pt;
+  font-family: 'Audiowide';
+  font-weight: bold;
+}
+#container > .f718 > p:nth-child(5){
+  grid-row: 3/5;
+  background-image: url(images/718/718_09.jpg);
+  background-size: cover;
+}
+#container > .f718 > p:nth-child(6){
+  background-color: #7c7c7c;
+}
+#container > .f718 > p:nth-child(7){
+  background-image: url(images/718/718_12.jpg);
+  background-size: cover;
+}
