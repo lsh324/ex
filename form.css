@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2em;
+}
+.login{
+  width: 700px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+.login p{
+  font-weight: bolder;
+  margin-top: 20px;
+}
+.login input[type=email],
+.login input[type=password]{
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 15px;
+}
+.login input[type=email]{
+  background-image: url(/email.jpeg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: left 10px center;
+  padding-left: 50px;
+}
+.login input[type=password]{
+  background-image: url(/password.jpg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: left 10px center;
+  padding-left: 50px;
+}
+.login input[type=email]:focus::placeholder,
+.login input[type=password]:focus::placeholder{
+  opacity: 0;
+}
+
+.login input[type=email]:hover,
+.login input[type=password]:hover{
+  box-shadow: 0 0 5px rgba(110, 110, 231, 0.9);
+}
+.login > div{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.login > div > a:hover{
+  text-decoration: underline;
+}
+.login button{
+  width: 200px;
+  font-size: 1.3em;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content{
+      height: 1000vh;
+      background-color: rgb(255, 224, 229);
+      padding: 20%;
+    }
+    img{
+      width: 150px;
+      transition: 1s;
+    }
+    img.zoom{
+      transform: scale(5);
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis perferendis asperiores, voluptates deserunt odit illum sapiente architecto iusto ex dignissimos alias delectus neque maiores nihil perspiciatis nisi dolorem nemo ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis perferendis asperiores, voluptates deserunt odit illum sapiente architecto iusto ex dignissimos alias delectus neque maiores nihil perspiciatis nisi dolorem nemo ea.Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis perferendis asperiores, voluptates deserunt odit illum sapiente architecto iusto ex dignissimos alias delectus neque maiores nihil perspiciatis nisi dolorem nemo ea.</p>
+    <img src="/images/slide2.jpg" >
+  </div>
+  <script>
+    const imgObj = document.querySelector('img');
+    const scrollEvent = () =>{
+      let posY = imgObj.getBoundingClientRect().top;
+      let h = window.innerHeight * 0.333333;
+      if(posY < h){
+        imgObj.classList.add('zoom');
+      }
+      else{
+        imgObj.classList.remove('zoom');
+      }  
+    }
+    const init = () => {
+        window.addEventListener('scroll',scrollEvent);
+      }
+      init();
+  </script>
+</body>
+</html>

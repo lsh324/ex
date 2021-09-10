@@ -1,0 +1,17 @@
+<style>
+h1{
+	color:red;
+}
+</style>
+
+<h1>Hello</h1>
+world
+<h1>클릭하세요</h1>
+<button>0</button>
+<script>
+  let button = document.querySelector('button');
+  button.addEventListener('click',todoClick);
+  function todoClick(){
+    button.innerText = Number(button.innerText)+10000;
+  }
+</script>
