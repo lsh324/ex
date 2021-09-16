@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+            box-sizing: border-box;
+        }
+        
+        .gnb{
+            background-color: #444;
+            overflow: hidden;
+            opacity: 0;
+            transition: 0.5s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .gnb a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 10px;
+            font-size: 16px;
+            float: left;
+        }
+
+        .gnb a:hover{
+            background-color: #555;
+        }
+
+        .gnb a:nth-child(1) {
+            background-color: yellowgreen;
+        }
+
+        .sticky{
+            opacity: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="gnb" >
+        <a herf="#">Home</a>
+        <a herf="#">News</a>
+        <a herf="#">Contact</a>
+    </div>
+    <div class="content">
+        <h2>Scroll Effect</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora explicabo porro totam illum doloremque reprehenderit neque vitae magnam blanditiis magni nemo, velit in eum voluptatum expedita quos iusto. Quae, placeat.</p>
+    </div>
+    <script>
+        const gnb = document.querySelector('.gnb');
+        const offset = gnb.getBoundingClientRect().bottom;
+        console.log(offset);
+        let rect = gnb.getBoundingClientRect();
+        console.log(rect);
+
+        const hide = () =>{
+            let top = document.documentElement.scrollTop || document.body.scrollTop;
+            console.log(top);
+            if( top > offset){
+                gnb.classList.add('sticky');
+            }
+            
+            else{
+                gnb.classList.remove('sticky');
+            }
+        }
+
+        const init = () =>{
+            window.addEventListener('scroll', hide);
+        }
+        init();
+    </script>
+</body>
+
+</html>

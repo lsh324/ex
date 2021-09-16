@@ -1,0 +1,6 @@
+@mixin bgColor($color:#333) {
+  background-color: $color;
+}
+@function fontSize(){
+  @return 100 / 16 ;
+}

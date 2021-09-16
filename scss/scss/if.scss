@@ -1,0 +1,24 @@
+@mixin textAndBgColor($textColor, $bgColor){
+  color: $textColor;
+  background-color: $bgColor;
+}
+@mixin thema($mood){
+  @if $mood == 'dark' {
+    @include textAndBgColor(#fff, #000);
+  }
+  @else if $mood == 'light'{
+    @include textAndBgColor(#ccc, #ff0);
+  }
+  @else {
+    @include textAndBgColor(#00f, #0f0);
+  }
+}
+#box1{
+  @include thema("dark");
+}
+#box2{
+  @include thema("light");
+}
+#box3{
+  @include thema("basic");
+}

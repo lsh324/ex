@@ -1,0 +1,55 @@
+html {
+  font-size: 62.5%;
+}
+
+.box1 {
+  font-size: 3rem;
+}
+
+.box1 a {
+  text-decoration: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.box1 a:hover {
+  font-size: 6rem;
+  text-decoration: underline;
+  opacity: .4;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: .4;
+    -webkit-transform: translate(300px, 300px);
+            transform: translate(300px, 300px);
+  }
+  100% {
+    opacity: .1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: .4;
+    -webkit-transform: translate(300px, 300px);
+            transform: translate(300px, 300px);
+  }
+  100% {
+    opacity: .1;
+  }
+}
+
+.box2 {
+  font-size: 5rem;
+  -webkit-animation-name: animate;
+          animation-name: animate;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}

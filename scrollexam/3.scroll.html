@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <style>
+        .title{
+            background-color: black;
+            color: white;
+            padding: 30px;
+        }
+        .detail{
+            background-color:lightgray;
+            padding: 30px 30px 2500px;
+        }
+        #topBtn{
+            background-color: red;
+            color: white;
+            font-weight: bolder;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            padding: 20px;
+            border: 5px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="topBtn">top</button>
+    <div class="title">Scroll Down</div>
+    <div class="detail">salsd dsfdsfe ldldldld pdsskdws wainsne spsn alwls<div>
+    
+    <script>
+
+        const topBtn = document.querySelector('#topBtn')
+
+        topBtn.addEventListener('click', function(){
+            document.documentElement.scrollTop = '0'
+        });
+
+        const scrollEvent = () =>{
+            if(document.documentElement.scrollTop > 50) {
+                topBtn.style.display = 'block';
+            } else{
+                topBtn.style.display = 'none';
+            }
+        };
+
+        const init = () =>{
+            window.addEventListener('scroll',scrollEvent);
+        }
+
+        init();
+    </script>
+</body>
+</html>

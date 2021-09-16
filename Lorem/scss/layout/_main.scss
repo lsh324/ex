@@ -1,0 +1,167 @@
+
+main{
+  display: flex;
+  
+  @include mq('mobile'){
+    display: block;
+  }
+  @include mq('tablet'){
+    display: block;
+  }
+  .main-about{
+    @include mq('mobile'){
+      width: 100%;
+      padding: 4rem 0 2rem 1.5rem;
+    }
+    @include mq('tablet'){
+      width: 100%;
+      padding: 5rem 0 10rem 4rem;
+    }
+    padding: 7rem 0 6rem 6rem;
+    width: 70%;
+    background-color: #eee;
+    &-text{
+      float: left;
+      width: 60%;
+      padding: 2rem;
+      @include mq('mobile'){
+        width: 100%;
+        padding: 4rem 0 2rem 1.5rem;
+      }
+      @include mq('tablet'){
+        width: 100%;
+      }
+      h3{
+        padding: 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-grey-dark;
+      }
+      p{
+        padding: 2rem 1rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      a{
+        
+        @include mq('mobile'){
+          font-size: 1.2rem;       
+        }
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $color-primery;
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 1px solid $color-primery;
+        &:hover{
+          background-color: $color-secondary;
+          color: $color-white;
+          border: none;
+        }
+      }      
+    }
+    &-photo{
+      float: left;
+      width: 40%;
+      position: relative;
+
+      @include mq('mobile'){
+        width: 100%;
+      }
+      @include mq('tablet'){
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      .photo{
+        position: absolute;
+        width: 20rem;
+        height: 13rem;
+        transition: all .5s;
+        
+        @include mq('mobile'){
+          position: static;
+        }
+        @include mq('tablet'){
+          position: static;
+          float: left;
+        }
+          img{
+            width: 100%;
+            height: 100%;
+            box-shadow: 3px 3px 9px 0 rgba(0,0,0,0.4);
+            }
+          &:hover{
+            transform: scale(1.1);
+            padding: 1rem;
+            border: 3px solid $color-primery;
+            z-index: 10;
+          }
+          &:nth-child(1){
+            top: 1rem;
+            left: 3rem;
+            @include mq('tablet'){
+               
+            }
+          }
+          &:nth-child(2){
+            top: 6rem;
+            left: 10rem;
+            @include mq('tablet'){
+              
+            }
+          }
+      }
+    }
+    @include clearfix();
+  }
+
+  .main-etc{
+    width: 30%;
+
+    @include mq('mobile'){
+      width: 100%;
+    }
+    @include mq('tablet'){
+      width: 100%;
+    }
+    
+    &-content{
+      height: 20rem;
+      display: flex;
+      &:nth-child(1){
+        background-color: $color-pink-1;
+      }
+      &:nth-child(2){
+        background-color: $color-pink-2;
+      }
+      &:nth-child(3){
+        background-color: $color-pink-3;
+      }
+    }
+    &-icon{
+      width: 30%;
+      text-align: center;
+      line-height: 23rem;
+      i{
+        font-size: 6rem;
+      }
+    }
+    &-text{
+      width: 70%;
+      padding-top: 5rem;
+      h3{
+        padding-bottom: 1rem;
+        text-transform: uppercase;
+        font-size: 2.2rem;
+        color: $color-pink-dark;
+      }
+      p{
+        font-size: 1.7rem;
+        text-align: justify;
+        padding-right: 3rem;
+      }
+    }
+  }
+}

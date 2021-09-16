@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideBar</title>
+  </head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    #wrapper{
+      width: 800px;
+      margin: auto;
+      position: relative;
+    }
+    .slide_box{
+      width: 300px;
+      height: 300px;
+      margin: 30px auto;
+      overflow: hidden;
+    }
+    .slide_list{
+      display: flex;
+    }
+    .slide_contents{
+      width: 300px;
+      height: 300px;
+    }
+    .slide_btn_box > button{
+      width: 60px;
+      height: 60px;
+      font-size: 20px;
+      background-color: #eee;
+      border: 1px solid #ddd;
+      outline: none;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+    }
+    .slide_btn_prev{
+      left: 100px;
+
+    }
+    .slide_btn_next{
+      right: 100px;
+    }
+    .slide_current_circle .dot{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 50%;
+      margin: 3px;
+
+    }
+    .slide_current_circle .dot_active{
+      background-color: #333;
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <h1>Image slide Bar</h1>
+      <div class="slide_box">
+        <div class="slide_list">
+          <img src="../images/slide1.jpg" alt="image01" class="slide_contents">
+          <img src="../images/slide2.jpg" alt="image02" class="slide_contents">
+          <img src="../images/slide3.jpg" alt="image03" class="slide_contents">
+          <img src="../images/slide4.jpg" alt="image04" class="slide_contents">
+          <img src="../images/slide5.jpg" alt="image05" class="slide_contents">
+        </div>
+      </div>
+      <div class="slide_btn_box">
+        <button class="slide_btn_prev">Prev</button>
+        <button class="slide_btn_next">Next</button>
+      </div>
+      <div class="slide_current_circle">
+      </div>
+    </div>
+    <script src="0624_2.js"></script>
+  </body>
+</html>

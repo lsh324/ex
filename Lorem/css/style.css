@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@-webkit-keyframes moveLeft {
+  0% {
+    opacity: .1;
+    -webkit-transform: translateX(-7rem);
+            transform: translateX(-7rem);
+  }
+  70% {
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    opacity: .1;
+    -webkit-transform: translateX(-7rem);
+            transform: translateX(-7rem);
+  }
+  70% {
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveRight {
+  0% {
+    opacity: .1;
+    -webkit-transform: translateX(7rem);
+            transform: translateX(7rem);
+  }
+  70% {
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: .1;
+    -webkit-transform: translateX(7rem);
+            transform: translateX(7rem);
+  }
+  70% {
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 2rem;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+h2 {
+  padding: 1.7rem;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff5959), color-stop(60%, #ffa4a4));
+  background-image: linear-gradient(left, #ff5959 0%, #ffa4a4 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transition: all, .4s;
+  transition: all, .4s;
+}
+
+h2:hover {
+  padding-left: 3rem;
+}
+
+header {
+  width: 100%;
+  height: 90vh;
+  color: #fff;
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right top, from(#746448), color-stop(52%, #ffa4a4), to(#ff5959)), url("../images/header_bg.jpg");
+  background-image: linear-gradient(90deg, #746448 0%, #ffa4a4 52%, #ff5959 100%), url("../images/header_bg.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+header .logo-text {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: -0.2rem;
+  position: absolute;
+  left: 7rem;
+  top: 5rem;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+  -webkit-animation-name: moveLeft;
+          animation-name: moveLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+header .header-text {
+  position: absolute;
+  left: 7rem;
+  bottom: 20rem;
+}
+
+@media screen and (max-width: 480px) {
+  header .header-text {
+    left: 3rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header .header-text {
+    left: 5rem;
+  }
+}
+
+header .header-text-main {
+  font-size: 4rem;
+  line-height: 3.4rem;
+  -webkit-animation-name: moveRight;
+          animation-name: moveRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+header .header-text-sub {
+  margin-top: 5rem;
+  font-size: 2rem;
+  -webkit-animation-name: moveLeft;
+          animation-name: moveLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  main {
+    display: block;
+  }
+}
+
+main .main-about {
+  padding: 7rem 0 6rem 6rem;
+  width: 70%;
+  background-color: #eee;
+}
+
+@media screen and (max-width: 480px) {
+  main .main-about {
+    width: 100%;
+    padding: 4rem 0 2rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  main .main-about {
+    width: 100%;
+    padding: 5rem 0 10rem 4rem;
+  }
+}
+
+main .main-about-text {
+  float: left;
+  width: 60%;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  main .main-about-text {
+    width: 100%;
+    padding: 4rem 0 2rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  main .main-about-text {
+    width: 100%;
+  }
+}
+
+main .main-about-text h3 {
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #474747;
+}
+
+main .main-about-text p {
+  padding: 2rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+main .main-about-text a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff5959;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ff5959;
+}
+
+@media screen and (max-width: 480px) {
+  main .main-about-text a {
+    font-size: 1.2rem;
+  }
+}
+
+main .main-about-text a:hover {
+  background-color: #ffa4a4;
+  color: #fff;
+  border: none;
+}
+
+main .main-about-photo {
+  float: left;
+  width: 40%;
+  position: relative;
+}
+
+@media screen and (max-width: 480px) {
+  main .main-about-photo {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  main .main-about-photo {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+main .main-about-photo .photo {
+  position: absolute;
+  width: 20rem;
+  height: 13rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+@media screen and (max-width: 480px) {
+  main .main-about-photo .photo {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  main .main-about-photo .photo {
+    position: static;
+    float: left;
+  }
+}
+
+main .main-about-photo .photo img {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 3px 3px 9px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 3px 3px 9px 0 rgba(0, 0, 0, 0.4);
+}
+
+main .main-about-photo .photo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  padding: 1rem;
+  border: 3px solid #ff5959;
+  z-index: 10;
+}
+
+main .main-about-photo .photo:nth-child(1) {
+  top: 1rem;
+  left: 3rem;
+}
+
+main .main-about-photo .photo:nth-child(2) {
+  top: 6rem;
+  left: 10rem;
+}
+
+main .main-about:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+main .main-etc {
+  width: 30%;
+}
+
+@media screen and (max-width: 480px) {
+  main .main-etc {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  main .main-etc {
+    width: 100%;
+  }
+}
+
+main .main-etc-content {
+  height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-etc-content:nth-child(1) {
+  background-color: #ffd6d4;
+}
+
+main .main-etc-content:nth-child(2) {
+  background-color: #ffbab6;
+}
+
+main .main-etc-content:nth-child(3) {
+  background-color: #ffa1a1;
+}
+
+main .main-etc-icon {
+  width: 30%;
+  text-align: center;
+  line-height: 23rem;
+}
+
+main .main-etc-icon i {
+  font-size: 6rem;
+}
+
+main .main-etc-text {
+  width: 70%;
+  padding-top: 5rem;
+}
+
+main .main-etc-text h3 {
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color: #8d5858;
+}
+
+main .main-etc-text p {
+  font-size: 1.7rem;
+  text-align: justify;
+  padding-right: 3rem;
+}
+
+footer {
+  background-color: #474747;
+  color: #b9b9b9;
+  padding: 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-logo-text {
+  width: 20%;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+footer .copyright {
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+footer .copyright p:nth-child(1) {
+  margin-bottom: 3rem;
+  word-break: break-all;
+  text-align: justify;
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-width: 1.3rem;
+          column-width: 1.3rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-column-rule-style: dashed;
+          column-rule-style: dashed;
+  -webkit-column-rule-width: 1px;
+          column-rule-width: 1px;
+  -webkit-column-rule-color: #b9b9b9;
+          column-rule-color: #b9b9b9;
+}
+
+.gnb a {
+  text-decoration: none;
+}
+
+.gnb label {
+  width: 7rem;
+  height: 7rem;
+  background-color: #ffd6d4;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  z-index: 101;
+}
+
+.gnb #gnb_toggle {
+  display: none;
+}
+
+.gnb .gnb_body {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: #ffbab6;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.gnb #gnb_toggle:checked ~ .gnb_body {
+  display: block;
+  opacity: 1;
+  left: 0;
+}
+
+.gnb .gnb_bg {
+  width: 10rem;
+  height: 10rem;
+  background-color: #ffbab6;
+  position: fixed;
+  top: 3.5rem;
+  right: 3.5rem;
+  z-index: 99;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.gnb #gnb_toggle:checked ~ .gnb_bg {
+  -webkit-transform: scale(50);
+          transform: scale(50);
+}
+
+.gnb > .gnb_body > ul {
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+
+.gnb > .gnb_body > ul a {
+  display: block;
+  color: #fff;
+  padding: 1rem;
+  background-image: linear-gradient(135deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 230%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.gnb > .gnb_body > ul a:hover {
+  color: #ffbab6;
+  background-position: 100%;
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+}
+
+.gnb > .gnb_body > ul span:nth-child(1) {
+  margin-right: 2rem;
+}

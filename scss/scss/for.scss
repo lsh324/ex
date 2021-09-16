@@ -1,0 +1,23 @@
+// @for $변수 from 시작 through 종료{}
+// @for $i from 1 through 3{}
+//3번반복
+
+// @for $변수 from 시작 to 종료{}
+// @for $i from 1 to 3{}
+//2번반복
+body{
+  @for $i from 1 to 3{
+    div:nth-child(#{$i}){
+      width: 20px * $i;
+    }
+  }
+}
+
+// $value: (one, two, three);
+// div{
+//   @each $data in $value {
+//     div.#{$data}{
+//       background-image: url(../../../images/image-01.png);
+//     }
+//   }
+// }
