@@ -1,0 +1,295 @@
+@charset "utf-8";
+
+/**********************전체영역******************/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  box-sizing: border-box;
+  min-width: 320px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/***********header 영역***********************/
+
+#head{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+}
+#head > h1 {
+  background-color: #fece48;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 23px;
+}
+#head > h1 >span{
+  color: #7ed0de;
+}
+
+/*************모바일용 햄버거 메뉴 **********************/
+.gnb > input[id=menu_btn]{
+  display: none;
+}
+.gnb > label[for=menu_btn]{
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.gnb > label[for=menu_btn] div{
+  background-color: #222;
+  width: 80%;
+  height: 2px;
+  position: absolute;
+  transition: .2s;
+  opacity: 1;
+}
+.gnb > label[for=menu_btn] > div:nth-child(1){
+  top: 0;
+}
+.gnb > label[for=menu_btn] > div:nth-child(2){
+  top: 40%;
+}
+.gnb > label[for=menu_btn] > div:nth-child(3){
+  top: 80%;
+}
+.gnb > input[id=menu_btn]:checked ~ label[for=menu_btn] > div:nth-child(1){
+  top: 40%;
+  transform: rotate(45deg);
+}
+.gnb > input[id=menu_btn]:checked ~ label[for=menu_btn] > div:nth-child(2){
+  opacity: 0;
+}
+.gnb > input[id=menu_btn]:checked ~ label[for=menu_btn] > div:nth-child(3){
+  top: 40%;
+  transform: rotate(-45deg);
+}
+/******************main 메뉴 ******************************/
+#head > .gnb > .main-menu{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  display: none;
+  z-index: 10;
+  background-color: #fff;
+}
+#head > .gnb > input[id=menu_btn]:checked ~ .main-menu{
+  display: block;
+}
+#head > .gnb > .main-menu a{
+  display: block;
+  padding: 10px;
+
+}
+#head > .gnb > .main-menu a:hover{
+  background-color: #555;
+  color: #fff;
+}
+
+/***************banner 영역 ********************/
+
+#banner{
+  height: 80vh;
+  background-image: url(/bg_image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+#banner > .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#banner > .title > h1{
+  color: #fcfe14;
+  font-size: 10vw;
+  letter-spacing: 0.4em;
+  margin-left: 0.4em;
+}
+#banner > .title > h2{
+  color: #fff;
+
+}
+#banner > p{
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/********************어바웃 부분****************************/
+#about .tab_btn label{
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background-color: #222;
+}
+#about input[id=tab1]:checked ~ .tab_btn label[for=tab1],
+#about input[id=tab2]:checked ~ .tab_btn label[for=tab2],
+#about input[id=tab3]:checked ~ .tab_btn label[for=tab3]{
+  background-color: tomato;
+  width: 10px;
+  border-radius: 50%;
+  
+}
+#about input[name=tab]{
+  display: none;
+}
+/******************어바웃 화면 맞추기******************************/
+#about {
+  width: 300px;
+  margin: 30px auto;
+  
+  overflow: hidden;
+}
+#about > .container{
+  width: 900px;
+  position: relative;
+  transition: 1s;
+}
+#about .item{
+  width: 300px;
+  text-align: center;
+  float: left;
+}
+#about > input[id=tab1]:checked ~ .container{
+  left: 0;
+
+}
+#about > input[id=tab2]:checked ~ .container{
+  left: -300px;
+  
+}
+#about > input[id=tab3]:checked ~ .container{
+  left: -600px;
+  
+}
+#about >.container .item h1{
+  background-color: #fece48;
+  font-size: 40px;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* contact 영역  */
+#contact{
+  text-align: center;
+}
+#contact > .sns{
+  width: 70%;
+  margin: 30px auto;
+  background-color: #999;
+}
+#contact > .sns a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fff;
+  line-height: 40px;
+  position: relative;
+  overflow: hidden;
+}
+#contact > .sns a::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+#contact > .sns a:hover::before{
+  height: 100%;
+}
+#contact > .sns .icon{
+  position: relative;
+
+}
+#contact > .sns a:nth-child(1)::before{
+  background-color: blue;
+}
+#contact > .sns a:nth-child(2)::before{
+  background-color: pink
+}
+#contact > .sns a:nth-child(3)::before{
+  background-color: yellow
+}
+#contact > .sns a:nth-child(4)::before{
+  background-color: orange
+}
+/****************미디어 쿼리 ************************/
+
+/**********************태블릿********************************/
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .gnb > label[for=menu_btn]{
+    display: none;
+  }
+  #head  > .gnb > .main-menu{
+    display: flex;
+    position: static;
+  }
+  #head > .gnb > input[id=menu_btn]:checked ~ .main-menu{
+    display: flex;
+  }
+
+
+}
+
+
+
+/**************************PC***********************************/
+@media screen and (min-width:1024px) {
+
+  #head{
+    width: 80%;
+  }
+  .gnb > label[for=menu_btn]{
+    display: none;
+  }
+  #head  > .gnb > .main-menu{
+    display: flex;
+    position: static;
+  }
+  #head > .gnb > input[id=menu_btn]:checked ~ .main-menu{
+    display: flex;
+  }
+  
+  /* about */
+
+  #about > .tab_btn > label{
+    display: none;
+  }
+  #about {
+    overflow: auto;
+    width: 90%;
+    margin: 30px auto;
+  }
+  #about > .container{
+    position: static;
+    margin: 0 auto;
+  }
+  #about > .container .item > p{
+    padding: 10px;
+  }
+}

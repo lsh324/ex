@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/519008ffb3.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .main{
+        height: 30vh;
+      }
+      .contact{
+        text-align: center;
+      }
+      .modal{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .close{
+        color: #fff;
+        font-size: 70px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+      }
+  
+      .modal_content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        max-width: 500px;
+        width: 70%;
+        animation: zoom 0.5s;
+        
+      }
+
+      @keyframes zoom{
+        0%{
+          transform: scale(0);
+
+        }
+        100%{
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>LEE SANG <span>H</span>EE</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html" ">HOME</a></li>
+            <li><a href="about.html" >ABOUT</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="contact.html"  style="color: #7ed0de; font-weight: bolder";>CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="main">
+        <h1>PORTFOLIO</h1>
+        <h2>I'M A FRONTEND DEVELOPER</h2>
+
+        <p>SCROLL DOWN</p>
+      </div>
+
+      <section>
+        <div class="imgcontainer">
+          <h1>PORTFOLIO</h1>
+          <p>최근 작업</p>
+          <div class="imgwrap">
+            <div class="leftimg">
+              <img src="port01.png" />
+              <img src="port02.png" />
+              <img src="port03.png" />
+            </div>
+            <div class="midimg">
+              <img src="port07.png" />
+              <img src="port08.png" />
+              <img src="port09.png" />
+            </div>
+            <div class="rightimg">
+              <img src="port04.png" />
+              <img src="port05.png" />
+              <img src="port06.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal">
+        <span class="close">&times;</span>
+        <img class="modal_content" src="port01.png">
+      </div>
+      <footer>
+        <p>E-Mail. lsh324@naver.com</p>
+        <p>Copyright ⓒ 2021 by LEE SANG HEE.</p>
+        <p>All Rights Reserved</p>
+      </footer>
+    </div>
+  
+
+  </body>
+  <script>
+    const imgTag = document.querySelector('.imgwrap');
+    const modal = document.querySelector('.modal');
+    imgTag.addEventListener("click",function(e){
+      let targetSrc = e.target.getAttribute("src");
+      console.log( targetSrc );
+      modal.style.display = "block";
+      modal.children[1].src = targetSrc;
+    });
+    const closeBtn = modal.children[0];
+    closeBtn.addEventListener("click", function(){
+      modal.style.display = "none";
+    });
+  </script>
+
+</html>

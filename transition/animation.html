@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    
+    .box{
+      width: 10px;
+      height: 200px;
+      background-color: pink;
+      border-radius: 10px;
+      position: relative;
+      top: 200px;
+      left:50%;
+      transform-origin: center left;
+      animation: first-any 3s infinite;
+    }
+    
+    @keyframes first-any {
+      0%{
+        transform: rotate(0deg);
+    }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

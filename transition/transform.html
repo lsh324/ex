@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 2s;
+    }
+    .box1:hover{
+      transform: translate(300px, 500px);
+      
+    }
+    .box2:hover{
+      transform: scale(3);
+    }
+    .box3:hover{
+      transform: rotate(3600000deg);
+    }
+    .box4:hover{
+      transform: skew(4500deg,3000deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">translate</div>
+  <div class="box2">scale</div>
+  <div class="box3">rotate</div>
+  <div class="box4">skew</div>
+</body>
+</html>
