@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrap{
+      
+      display: grid;
+      grid-template-rows:minmax(200px, auto);
+      grid-template-columns: repeat(3, 250px);
+      gap: 20px;
+    }
+    .box:nth-child(odd){
+      background-color: rgb(141, 140, 140);
+    }
+    .box:nth-child(even){
+      background-color: rgb(214, 213, 213);
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dicta ad veniam eius natus provident labore quibusdam quos totam vitae, cupiditate dolore illo libero quaerat nemo, tenetur dolorem maiores odio!
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi mollitia esse et error quam temporibus velit aliquid aut. Maxime voluptatum officia ratione cum. Facere quas praesentium sed ab dolorum quidem?
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae soluta obcaecati nostrum nesciunt ipsum, adipisci autem, sed, incidunt maiores aperiam voluptatibus molestias laudantium magnam voluptas esse reprehenderit harum consequuntur aliquid.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, vero. Ipsum perspiciatis, animi placeat eligendi recusandae veritatis saepe ad explicabo architecto hic nulla dicta esse facilis in porro atque rem!
+    </div>
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sit nihil aspernatur minus, repellendus, esse ab, natus quasi officia quod eveniet fugit explicabo autem vel necessitatibus iure sint. Debitis, dignissimos.</div>
+    <div class="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt fugit, pariatur optio fuga perferendis et necessitatibus tempore. Iure, non repellendus magni nihil cum hic officiis dolores sint consectetur veritatis neque.</div>
+  </div>
+</body>
+</html>
