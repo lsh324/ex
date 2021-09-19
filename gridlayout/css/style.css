@@ -108,7 +108,7 @@ body{
   font-weight: bold;
 }
 #container > .f911 > p:nth-child(2){
-  background-image: url(images/911/911_03.jpg);
+  background-image: url(../images/911/911_03.jpg);
   background-size: cover;
 }
 #container > .f911 > p:nth-child(3){
@@ -118,11 +118,11 @@ body{
   background-color: #b5b5b5;
 }
 #container > .f911 > p:nth-child(5){
-  background-image: url(images/911/911_06.jpg);
+  background-image: url(../images/911/911_06.jpg);
   background-size: cover;
 }
 #container > .f911 > p:nth-child(6){
-  background-image: url(images/911/911_13.jpg);
+  background-image: url(../images/911/911_13.jpg);
   background-size: cover;
 }
 #container > .f911 > p:nth-child(7){
@@ -131,7 +131,7 @@ body{
 #container > .f911 > p:nth-child(8){
   grid-column: 3/5;
   grid-row: 2/4;
-  background-image: url(images/911/911_11.jpg);
+  background-image: url(../images/911/911_11.jpg);
   background-size: cover;
 }
 #container > .f911 > p:nth-child(9){
@@ -139,7 +139,7 @@ body{
 }
 #container > .f911 > p:nth-child(10){
   grid-column: 2/4;
-  background-image: url(images/911/911_15.jpg);
+  background-image: url(../images/911/911_15.jpg);
   background-size: cover;
 }
 #container > .f911 > p:nth-child(11){
@@ -157,19 +157,19 @@ body{
 }
 #container > .macan > p:nth-child(1) i:nth-child(1):hover{
   color: rgb(255, 229, 173);
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 #container > .macan > p:nth-child(1) i:nth-child(2):hover{
   color: rgb(71, 130, 238);
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 #container > .macan > p:nth-child(1) i:nth-child(3):hover{
   color: rgb(211, 58, 58);
-  transform: scale(1.5);
+  transform: scale(1.3);
   
 }
 #container > .macan > p:nth-child(2){
-  background-image: url(images/macan/macan_02.jpg);
+  background-image: url(../images/macan/macan_02.jpg);
   background-size: cover;
 }
 #container > .macan > p:nth-child(3){
@@ -181,35 +181,35 @@ body{
 }
 #container > .macan > p:nth-child(4){
   grid-row: 2/4;
-  background-image: url(images/macan/macan_07.jpg);
+  background-image: url(../images/macan/macan_07.jpg);
   background-size: cover;
 }
 #container > .macan > p:nth-child(5){
   grid-column: 2/4;
   grid-row: 2/4;
-  background-image: url(images/macan/macan_09.jpg);
+  background-image: url(../images/macan/macan_09.jpg);
   background-size: cover;
 }
 #container > .macan > p:nth-child(6){
-  background-image: url(images/macan/macan_05.jpg);
+  background-image: url(../images/macan/macan_05.jpg);
   background-size: cover;
 }
 #container > .macan > p:nth-child(7){
   background-color: #434343;
 }
 #container > .macan > p:nth-child(8){
-  background-image: url(images/macan/macan_11.jpg);
+  background-image: url(../images/macan/macan_11.jpg);
   background-size: cover;
 }
 #container > .macan > p:nth-child(9){
   background-color: #434343;
 }
 #container > .macan > p:nth-child(10){
-  background-image: url(images/macan/macan_15.jpg);
+  background-image: url(../images/macan/macan_15.jpg);
   background-size: cover;
 }
 #container > .macan > p:nth-child(11){
-  background-image: url(images/macan/macan_13.jpg);
+  background-image: url(../images/macan/macan_13.jpg);
   background-size: cover;
 }
 /******************** 718 ******************/
@@ -217,14 +217,14 @@ body{
 #container > .f718 > p:nth-child(1){
   grid-column: 1/3;
   grid-row: 1/5;
-  background-image: url(images/718/718_01.jpg);
+  background-image: url(../images/718/718_01.jpg);
   background-size: cover;
 }
 #container > .f718 > p:nth-child(2){
   background-color: #555555;
 }
 #container > .f718 > p:nth-child(3){
-  background-image: url(images/718/718_04.jpg);
+  background-image: url(../images/718/718_04.jpg);
   background-size: cover;
 }
 #container > .f718 > p:nth-child(4){
@@ -236,13 +236,13 @@ body{
 }
 #container > .f718 > p:nth-child(5){
   grid-row: 3/5;
-  background-image: url(images/718/718_09.jpg);
+  background-image: url(../images/718/718_09.jpg);
   background-size: cover;
 }
 #container > .f718 > p:nth-child(6){
   background-color: #7c7c7c;
 }
 #container > .f718 > p:nth-child(7){
-  background-image: url(images/718/718_12.jpg);
+  background-image: url(../images/718/718_12.jpg);
   background-size: cover;
 }
