@@ -31,7 +31,7 @@ body{
   width: 100vw;
   height: 100vh;
   transform-style: preserve-3d;
-  transform: translateZ(-600vw);
+  transform: translateZ(-520vw);
 }
 .header{
   width: 100%;
