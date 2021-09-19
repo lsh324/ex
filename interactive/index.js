@@ -15,7 +15,7 @@ const menuActive = (idx) => {
 }
 
 const getMenuIndex = (zMove) => {
-  for( let i=0 ; i<zPosition.length ; i++ ){
+  for( let i=0 ; i<zPosition.length-1 ; i++ ){
     if( zMove >=zPosition[i] && zMove < zPosition[i+1] ){
       return i;
     }
