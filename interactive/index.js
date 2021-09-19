@@ -30,7 +30,7 @@ const scrollEvent = () =>{
   barObj.style.width = `${scrollPer*100}%`;
   boxObj.style.transform = `translateZ(${zMove}vw)`; 
   console.log(zMove); 
-  let menuIndex = getMenuIndex( zMove );
+  let menuIndex = getMenuIndex(zMove);
   console.log("menuIndex = " + menuIndex);
   const activeMenu = document.querySelector('.active');
   activeMenu.classList.remove('active'); 
