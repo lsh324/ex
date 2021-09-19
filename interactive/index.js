@@ -1,9 +1,8 @@
-
 const barObj = document.querySelector('.process-bar');
 const boxObj = document.querySelector('.box');
 const stageObj = document.querySelector('.stage');
 const menuObj = document.querySelector('.side-menu');
-const zPosition = [-600, -400, -120, 130, 325, 400];
+const zPosition = [-600, -435, -120, 130, 325, 402];
 
 let posX = 0;
 let posY = 0;
