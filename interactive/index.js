@@ -8,19 +8,19 @@ const zPosition = [-500, -270, -25, 225, 430, 500];
 let posX = 0;
 let posY = 0;
 
-// const menuActive = (idx) => {
-//   const prev = document.querySelector('.active');
-//   prev.classList.remove('active');
-//   menuObj.children[idx].classList.add('active');
-// }
+const menuActive = (idx) => {
+  const prev = document.querySelector('.active');
+  prev.classList.remove('active');
+  menuObj.children[idx].classList.add('active');
+}
 
-// const getMenuIndex = (zMove) => {
-//   for( let i=0 ; i<zPosition.length ; i++ ){
-//     if( zMove >=zPosition[i] && zMove < zPosition[i+1] ){
-//       return i;
-//     }
-//   }
-// }
+const getMenuIndex = (zMove) => {
+  for( let i=0 ; i<zPosition.length ; i++ ){
+    if( zMove >=zPosition[i] && zMove < zPosition[i+1] ){
+      return i;
+    }
+  }
+}
 
 const scrollEvent = () =>{
   const contentScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -30,10 +30,10 @@ const scrollEvent = () =>{
   barObj.style.width = `${scrollPer*100}%`;
   boxObj.style.transform = `translateZ(${zMove}vw)`; 
   console.log(zMove); 
-  // let menuIndex = getMenuIndex( zMove );
-  // const activeMenu = document.querySelector('.active');
-  // activeMenu.classList.remove('active'); 
-  // menuObj.children[menuIndex].classList.add('active');
+  let menuIndex = getMenuIndex( zMove );
+  const activeMenu = document.querySelector('.active');
+  activeMenu.classList.remove('active'); 
+  menuObj.children[menuIndex].classList.add('active');
 }
 
 const mouseMoveEvent = (e) =>{
