@@ -3,7 +3,7 @@ const barObj = document.querySelector('.process-bar');
 const boxObj = document.querySelector('.box');
 const stageObj = document.querySelector('.stage');
 const menuObj = document.querySelector('.side-menu');
-const zPosition = [-500, -270, -25, 225, 430, 500];
+const zPosition = [-600, -400, -120, 130, 325, 400];
 
 let posX = 0;
 let posY = 0;
