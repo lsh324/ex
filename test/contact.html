@@ -1,68 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/519008ffb3.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      .main{
-        height: 30vh;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>LEE SANG <span>H</span>EE</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html" ">HOME</a></li>
-            <li><a href="about.html" >ABOUT</a></li>
-            <li><a href="portfolio.html" style="color: #7ed0de; font-weight: bolder";>PORTFOLIO</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>
-        </nav>
-      </header>
 
-      <div class="main">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <style>
+    .main {
+      height: 30vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header id="head">
+      <h1>LEE SANG <span>H</span>EE</h1>
+      <nav class="gnb">
+        <!-- 모바일에서 보여지는 햄버거 메뉴 -->
+        <input type="checkbox" id=menu_btn>
+        <label for="menu_btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+        <div class="main-menu">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="portfolio.html">PORTFOLIO</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
+      </nav>
+    </header>
+
+    <section id="banner">
+      <div class="title">
         <h1>PORTFOLIO</h1>
         <h2>I'M A FRONTEND DEVELOPER</h2>
-
-        <p>SCROLL DOWN</p>
       </div>
+      <p>SCROLL DOWN</p>
+    </section>
 
-      <section>
+    <section>
 
 
-        <div class="contact">
-          <h1>CONTACT</h1>
+      <section id="contact">
+        <h1>CONTACT</h1>
+        <div class="text">
           <p>
-            안녕하세요. 이상희 입니다.<br />
-            궁금한 사항을 메일로 문의해 주시면 빠른 시일내에 답변 드리도록
-            하겠습니다.<br />
-            감사합니다.<br />
+            안녕하세요. 이상희 입니다.
           </p>
-          <div class="sns">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="far fa-envelope"></i></a>
-          </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.7211694645466!2d127.24584271558496!3d37.396425841609044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357caba43479f693%3A0xd8c4a273eb6ed8d3!2zSUNU7Y-066as7YWN64yA7ZWZIGljdCBwb2x5dGVjaCBpbnN0aXR1dGUgb2Yga29yZWE!5e0!3m2!1sko!2skr!4v1623300167553!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <p>
+            궁금한 사항을 메일로 문의해 주시면 감사하겠습니다.
+          </p>
         </div>
+        <div class="sns">
+          <a href="#"><i class="fab fa-facebook-f icon"></i></a>
+          <a href="#"><i class="fab fa-twitter icon"></i></a>
+          <a href="#"><i class="fab fa-instagram icon"></i></a>
+          <a href="#"><i class="far fa-envelope icon"></i></a>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.7211694645466!2d127.24584271558496!3d37.396425841609044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357caba43479f693%3A0xd8c4a273eb6ed8d3!2zSUNU7Y-066as7YWN64yA7ZWZIGljdCBwb2x5dGVjaCBpbnN0aXR1dGUgb2Yga29yZWE!5e0!3m2!1sko!2skr!4v1623300167553!5m2!1sko!2skr"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </section>
-
       <footer>
         <p>E-Mail. lsh324@naver.com</p>
         <p>Copyright ⓒ 2021 by LEE SANG HEE.</p>
         <p>All Rights Reserved</p>
       </footer>
-    </div>
-  </body>
+  </div>
+
+</body>
+
 </html>

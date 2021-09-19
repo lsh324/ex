@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/media.css">
     <script
       src="https://kit.fontawesome.com/519008ffb3.js"
       crossorigin="anonymous"
@@ -61,24 +62,32 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header id="head">
         <h1>LEE SANG <span>H</span>EE</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html" ">HOME</a></li>
-            <li><a href="about.html" >ABOUT</a></li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="contact.html"  style="color: #7ed0de; font-weight: bolder";>CONTACT</a></li>
-          </ul>
+        <nav class="gnb">
+          <!-- 모바일에서 보여지는 햄버거 메뉴 -->
+          <input type="checkbox" id=menu_btn>
+          <label for="menu_btn">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+          <div class="main-menu">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
         </nav>
       </header>
 
-      <div class="main">
-        <h1>PORTFOLIO</h1>
-        <h2>I'M A FRONTEND DEVELOPER</h2>
-
+      <section id="banner">
+        <div class="title">
+          <h1>PORTFOLIO</h1>
+          <h2>I'M A FRONTEND DEVELOPER</h2>
+        </div>
         <p>SCROLL DOWN</p>
-      </div>
+      </section>
 
       <section>
         <div class="imgcontainer">
@@ -86,26 +95,26 @@
           <p>최근 작업</p>
           <div class="imgwrap">
             <div class="leftimg">
-              <img src="port01.png" />
-              <img src="port02.png" />
-              <img src="port03.png" />
+              <img src="images/port01.png" />
+              <img src="images/port02.png" />
+              <img src="images/port03.png" />
             </div>
             <div class="midimg">
-              <img src="port07.png" />
-              <img src="port08.png" />
-              <img src="port09.png" />
+              <img src="images/port07.png" />
+              <img src="images/port08.png" />
+              <img src="images/port09.png" />
             </div>
             <div class="rightimg">
-              <img src="port04.png" />
-              <img src="port05.png" />
-              <img src="port06.png" />
+              <img src="images/port04.png" />
+              <img src="images/port05.png" />
+              <img src="images/port06.png" />
             </div>
           </div>
         </div>
       </section>
       <div class="modal">
         <span class="close">&times;</span>
-        <img class="modal_content" src="port01.png">
+        <img class="modal_content" src="images/port01.png">
       </div>
       <footer>
         <p>E-Mail. lsh324@naver.com</p>

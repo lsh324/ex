@@ -5,59 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/519008ffb3.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      .main{
-        height: 30vh;
-      }
-      .info{
-        text-align: center;
-      }
-      
-    </style>
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
+    <div class="wrap">
+      <header id="head">
         <h1>LEE SANG <span>H</span>EE</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html" ">HOME</a></li>
-            <li><a href="about.html" style="color: #7ed0de; font-weight: bolder";>ABOUT</a></li>
-            <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>
+        <nav class="gnb">
+          <!-- 모바일에서 보여지는 햄버거 메뉴 -->
+          <input type="checkbox" id=menu_btn>
+          <label for="menu_btn">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+          <div class="main-menu">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
         </nav>
       </header>
 
-      <div class="main">
-        <h1>PORTFOLIO</h1>
-        <h2>I'M A FRONTEND DEVELOPER</h2>
-
+      <section id="banner">
+        <div class="title">
+          <h1>PORTFOLIO</h1>
+          <h2>I'M A FRONTEND DEVELOPER</h2>
+        </div>
         <p>SCROLL DOWN</p>
-      </div>
+      </section>
 
-      <section>
-        <div class="info">
+     
+        <div id="about">
           <input type="radio" name="tab" id="tab1" checked />
           <input type="radio" name="tab" id="tab2" />
           <input type="radio" name="tab" id="tab3" />
 
-          <div class="btn">
+          <div class="tab_btn">
             <label for="tab1"></label>
             <label for="tab2"></label>
             <label for="tab3"></label>
           </div>
 
-          <div class="slide">
-            <div class="slide-items">
-              <div class="box">
+          <div class="container">
+            <div class="item">
                 <h1>D</h1>
-                <p>DESIGN</p>
+                <h2>DESIGN</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Suscipit deleniti, consequatur similique deserunt assumenda
@@ -65,36 +61,24 @@
                 </p>
               </div>
 
-              <div class="box">
+              <div class="item">
                 <h1>P</h1>
-                <p>PUBLISING</p>
+                <h2>PUBLISING</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Suscipit deleniti, consequatur similique deserunt assumenda
                   illo itaque
                 </p>
               </div>
-              <div class="box">
+              <div class="item">
                 <h1>D</h1>
-                <p>DEVELOPER</p>
+                <h2>DEVELOPER</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Suscipit deleniti, consequatur similique deserunt assumenda
                   illo itaque
                 </p>
               </div>
-            </div>
-          </div>
-          
+            </div>   
         </div>
-
       </section>
-
-      <footer>
-        <p>E-Mail. lsh324@naver.com</p>
-        <p>Copyright ⓒ 2021 by LEE SANG HEE.</p>
-        <p>All Rights Reserved</p>
-      </footer>
-    </div>
-  </body>
-</html>

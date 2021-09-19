@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/**********************태블릿********************************/
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .gnb > label[for=menu_btn]{
+    display: none;
+  }
+  #head  > .gnb > .main-menu{
+    display: flex;
+    position: static;
+  }
+  #head > .gnb > input[id=menu_btn]:checked ~ .main-menu{
+    display: flex;
+  }
+}
+  /**************************PC***********************************/
+@media screen and (min-width:1024px) and (max-width:1900px) {
+
+  #head{
+    width: 80%;
+  }
+  .gnb > label[for=menu_btn]{
+    display: none;
+  }
+  #head  > .gnb > .main-menu{
+    display: flex;
+    position: static;
+  }
+  #head > .gnb > input[id=menu_btn]:checked ~ .main-menu{
+    display: flex;
+  }
+  
+  /* about */
+
+  #about > .tab_btn > label{
+    display: none;
+  }
+  #about {
+    overflow: auto;
+    width: 90%;
+    margin: 30px auto;
+  }
+  #about > .container{
+    position: static;
+    margin: 0 auto;
+  }
+  #about > .container .item > p{
+    padding: 10px;
+  }
+}
