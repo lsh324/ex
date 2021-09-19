@@ -31,6 +31,7 @@ const scrollEvent = () =>{
   boxObj.style.transform = `translateZ(${zMove}vw)`; 
   console.log(zMove); 
   let menuIndex = getMenuIndex( zMove );
+  console.log("menuIndex = " + menuIndex);
   const activeMenu = document.querySelector('.active');
   activeMenu.classList.remove('active'); 
   menuObj.children[menuIndex].classList.add('active');
