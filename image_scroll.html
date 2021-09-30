@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vidio scroll</title>
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+    }
+    body{
+      height: 500vh;
+    }
+    body.before-load{
+      overflow-y: hidden;
+    }
+    .sample-img{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="before-load">
+  <img class="sample-img" src="video_images/sq/Green_(1).jpg" alt="scrollimages">
+  <script>
+    const sampleImg = document.querySelector('.sample-img');
+    const videoImages = [];
+    const totalImagesCount = 150;
+    let loadImagesCount = 0;
+
+    let progress=0;
+    let currentFrame;
+    const init = ()=>{
+      document.body.classList.remove('before-load');
+      window.addEventListener('scroll',()=>{
+        progress = window.pageYOffset / ( document.body.offsetHeight - window.innerHeight );
+
+        requestAnimationFrame(function(){
+          currentFrame = Math.round( progress*(totalImagesCount-1) );
+          // console.log(currentFrame);
+          sampleImg.src=videoImages[currentFrame].src;
+        }); 
+        
+      });
+    }
+    const loadImages = () =>{
+      for ( let i = 1; i<=totalImagesCount; i++ ){
+        let imgElem = new Image();
+        imgElem.src = `video_images/sq/Green_(${i}).jpg`;
+        videoImages.push(imgElem);
+        imgElem.addEventListener('load',() => {
+          loadImagesCount++;
+          if( loadImagesCount === totalImagesCount );
+          // console.log('이미지로드완료');
+          init();
+        });
+      }
+      // console.log(videoImages);
+    }
+    loadImages();
+  </script>
+</body>
+</html>
