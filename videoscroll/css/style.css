@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;600;700;800&display=swap');
+
+/* 공통 태그 설정 */
+html{
+  font-family: 'Noto Sans Display', sans-serif;
+  font-size: 14px;
+}
+body{
+  /* overflow-x: hidden; */
+  letter-spacing: -0.05rem;
+  
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+p{
+  line-height: 1.6;
+}
+
+/* 구간 별 스타일 설정 */
+
+/* nav */
+.global-nav{
+  width: 100%;
+  height: 44px;
+  padding: 0 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.local-nav{
+  width: 100%;
+  height: 52px;
+  border-bottom: 1px solid #eee;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: absolute;
+  top: 45px;
+  left: 0;
+}
+.global-nav-link,
+.local-nav-link{
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.global-nav-link{
+  justify-content: space-between;
+}
+.local-nav-link .product-name{
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.local-nav-link a{
+  font-size: 0.8rem;
+}
+.local-nav-link a:not(.product-name){
+  margin-left: 2rem;
+}
+
+/* section */
+.scroll-section{
+  padding-top: 50vh;
+  /* 임시 추가 */
+  border: 3px solid red;
+}
+#scroll-section-0 h1{
+  font-size: 4rem;
+  text-align: center;
+}
+.main-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.main-message p{
+  font-weight: 600;
+  text-align: center;
+}
+.desc-message{
+  width: 40%;
+}
+.pin{
+  width: 1px;
+  height: 100px;
+  background-color: #222;
+}
+.description{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.description strong{
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-right: 0.3rem;
+  float: left;
+}
+.canvas-caption{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.main-message small{
+  display: block;
+}
+#scroll-section-2 .main-message{
+  font-size: 2rem;
+}
+
+/* 푸터 */
+.footer{
+  height: 7rem;
+  background-color: rgb(199, 177, 55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+/*  */
+.sticky-elem{
+  display: none;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 65vh;
+
+
+}
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem{
+  display: block;
+}
