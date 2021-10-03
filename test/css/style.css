@@ -318,7 +318,7 @@ footer{
 
 
 /**************************PC***********************************/
-@media screen and (min-width:1024px) and (max-width:1900px) {
+@media screen and (min-width:1024px){
 
 /* 이미지부분 */
 .imgwrap{

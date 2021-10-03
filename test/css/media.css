@@ -14,7 +14,7 @@
   }
 }
   /**************************PC***********************************/
-@media screen and (min-width:1024px) and (max-width:1900px) {
+@media screen and (min-width:1024px){
 
   #head{
     width: 80%;
