@@ -1,6 +1,7 @@
 @charset "utf-8";
 html{
   scroll-behavior: smooth;
+  /* overflow: hidden; */
 }
 #wrap{
   width: 100%;
@@ -126,7 +127,7 @@ html{
   width: 100vw;
   height: 100vh;
   /* background-color: rgb(44, 44, 44); */
-  background: linear-gradient(150deg, #17243b, #09214e);
+  background: linear-gradient(180deg, #030c1b, #444e61);
 }
 #project>h2{
   color: #fff;
@@ -138,24 +139,26 @@ html{
   width: 100%;
   height: 65rem;
   position: relative;
-  overflow: hidden;
 }
 #project .container .button{
   width: 64vw;
   height: 65rem;
-  font-size: 10rem;
-  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
+  z-index: 10;
+}
+#project .container .button button{
+  font-size: 10rem;
+  color: #fff;
   align-items: center;
 }
 /* project - card */
 #project .container .cardwrap{
-  width: 300vw;
+  /* width: 300vw; */
   height: 65rem;
   position: absolute;
   display: flex;
@@ -168,7 +171,8 @@ html{
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
   position: relative;
   top: 10vh;
-  left: -11.7%;
+  left: 8.4%;
+  /* left: -11.4%; */
   margin-right: 10vw;
 }
 /* 카드 */
@@ -212,7 +216,8 @@ html{
 #contact{
   width: 100%;
   height: 100vh;
-  background-color: #222;
+  /* background-color: #222; */
+  background: linear-gradient(180deg, #444e61, rgb(150, 152, 156));
   position: relative;
 }
 #contact h2{
@@ -284,6 +289,7 @@ html{
   color: #fff;
   outline: none;
   border: none;
+  padding-left: 1rem;
 }
 #contact .mail .mailform .gform input:nth-child(2){
   width: 100%;
@@ -294,6 +300,7 @@ html{
   color: #fff;
   outline: none;
   border: none;
+  padding-left: 1rem;
 }
 #contact .contact-wrap .mail .mailform .gform textarea{
   width: 100%;
@@ -306,6 +313,7 @@ html{
   outline: none;
   border: none;
   resize: none;
+  padding: 1rem;
 }
 #contact .contact-wrap .mail .mailform .gform button{
   width: 30%;
