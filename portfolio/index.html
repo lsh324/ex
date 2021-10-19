@@ -20,24 +20,25 @@
         <i class="fas fa-chevron-up"></i>
         <p>TOP</p>
       </div>
-      <header id="main">
+      <header id="main" class="panel">
         <div class="main-bg">
-          <video src="images/main-bg.mp4" autoplay loop></video>
+          <video src="images/main-bg.mp4" muted autoplay loop></video>
         </div>
         <div class="header">
           <h2><a href="index.html">LEESANGHEE</a></h2>
-          <nav>
-            <a href="#">PROJECT</a>
-            <a href="#">ABOUT</a>
+          <nav class="nav">
+            <a href="#project">PROJECT</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#"><i class="fab fa-github"></i></a>
           </nav>
         </div>
         <div class="banner">
           <h1>PORTFOLIO</h1>
           <h3>WEBPUBLISHER</h3>
         </div>
-        <img src="images/scroll.png" alt="화살표" class="arrow">
+        <img src="images/scroll.png" alt="화살표" class="arrow" />
       </header>
-      <section id="project">
+      <section id="project" class="panel">
         <h2>PROJECT</h2>
         <div class="container">
           <div class="button">
@@ -47,54 +48,160 @@
           <div class="cardwrap">
             <div class="card card1">
               <div class="project-img">
-                <img src="images/port1.png " alt="포트폴리오이미지">
+                <img src="images/port1.png " alt="포트폴리오이미지" />
               </div>
-                <div class="project-text">
-                  <h2>반응형 웹사이트</h2>
-                  <p>반응형을 이용한 <br>
-                  블로그형 웹 사이트</p>
-                  <p>웹 표준사용(HTML5,CSS3)<br>
-                  미디어쿼리<br>
-                  CSS를 이용한 애니메이션효과</p>
-                  <h2>기여도</h2>
-                  <p>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </p>
-                </div>
+              <div class="project-text">
+                <h2>반응형 웹사이트</h2>
+                <p>
+                  미디어쿼리를 이용하여 <br />
+                  블로그형태의 웹 사이트로 구현
+                </p>
+                <p>
+                  웹 표준적용(HTML5,CSS3)<br />
+                  미디어쿼리<br />
+                  CSS를 이용한 애니메이션효과<br />
+                  JQuery
+                </p>
+                <h2>기여도</h2>
+                <p>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </p>
               </div>
+            </div>
             <div class="card card2">
               <div class="project-img">
-                <img src="images/port1.png " alt="포트폴리오이미지">
+                <img src="images/sports.png" alt="사이트이미지">
               </div>
-                <div class="project-text">
-                  <h2>반응형 웹사이트</h2>
-                  <p>반응형을 이용한 <br>
-                  블로그형 웹 사이트</p>
-                  <p>웹 표준사용(HTML5,CSS3)<br>
-                  미디어쿼리<br>
-                  CSS를 이용한 애니메이션효과</p>
-                  <h2>기여도</h2>
-                  <p>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <i class="far fa-star"></i>
-                  </p>
-                </div>
+              <div class="project-text">
+                <h2>스포츠카 포뮬러 사이트</h2>
+                <p>
+                  GridLayout을 이용한 <br />
+                  인터렉티브 웹페이지 구현
+                </p>
+                <p>
+                  웹 표준적용(HTML5,CSS3)<br />
+                  CSS3 Animation<br />
+                  JavaScript<br />
+                  PhotoShop
+                </p>
+                <h2>기여도</h2>
+                <p>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </p>
+              </div>
             </div>
-            <div class="card card3">3</div>
-            <div class="card card4">4</div>
-            <div class="card card5">5</div>
+            <div class="card card3">
+              <div class="project-img">
+                <img src="images/league.png" alt="이미지">
+              </div>
+              <div class="project-text">
+                <h2>League of Legends</h2>
+                <p>
+                  3D효과를 이용한<br />
+                  인터렉티브 웹페이지 구현
+                </p>
+                <p>
+                  웹 표준적용(HTML5,CSS3)<br />
+                  CSS3 Animation<br />
+                  JavaScript<br />
+                  PhotoShop
+                </p>
+                <h2>기여도</h2>
+                <p>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </p>
+              </div>
+            </div>
+            <div class="card card4">
+              <div class="project-img">
+                <img src="images/momentum.png" alt="사이트이미지">
+              </div>
+              <div class="project-text">
+                <h2>구글 모멘텀 클론 사이트</h2>
+                <p>
+                  외부 API를 이용한<br />
+                  구글 확장 프로그램<br>
+                  모멘텀 클론 사이트
+                </p>
+                <p>
+                  웹 표준적용(HTML5,CSS3)<br />
+                  JavaScript<br />
+                  날씨정보API, 구글메일API사용<br>
+                  PhotoShop
+                </p>
+                <h2>기여도</h2>
+                <p>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </p>
+              </div>
+            </div>
+            <div class="card card5">
+              <div class="project-img"></div>
+              <div class="project-text">
+                <h2>애플 클론 웹 사이트</h2>
+                <p>
+                  스크롤을 이용하여<br />
+                  이미지가 부드럽게<br>
+                  재생되는 애플 사이트를<br>
+                  클론코딩한 사이트
+                </p>
+                <p>
+                  웹 표준적용(HTML5,CSS3)<br />
+                  JavaScript<br />
+                  PhotoShop
+                </p>
+                <h2>기여도</h2>
+                <p>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section id="about"></section>
+      <section id="contact" class="panel">
+        <h2>CONTACT</h2>
+        <div class="contact-wrap">
+          <div class="mail">
+            <h3><i class="fas fa-envelope"></i>궁굼하신 사항을 이메일로 보내주세요</h3>
+            <div class="mailform">
+              <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzaebNv-WRymBFAeAFhwqdRZW4L6f_nn4vJGIZdP0AsM0F6Z3_3ArLgFIXAl8qtLVPs/exec">
+                <input type="text" id="name" name="name" placeholder="name" autocomplete="off">
+                <input type="text" id="email" name="email" placeholder="email" autocomplete="off">
+                <textarea id="message" name="message" placeholder="내용을 입력해주세요" ></textarea>
+                <button type="submit" id="submit">보내기</button>
+                <div style="display:none;" class="thankyou_message">
+              </div>
+            </div>
+          </div>
+          <div class="contact-list">
+            <h3>Contact Me</h3>
+            <p><i class="fas fa-mobile-alt"></i><span>010-2022-5802</span></p>
+            <p><i class="fas fa-envelope"></i><span>lsh324@naver.com</span></p>
+          </div>
+        </div>
+      </section>
     </div>
-    <script src="script/script.js"></script>
+    <script src="script/scroll.js"></script>
   </body>
 </html>

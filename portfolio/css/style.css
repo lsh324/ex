@@ -1,8 +1,11 @@
 @charset "utf-8";
-
+html{
+  scroll-behavior: smooth;
+}
 #wrap{
   width: 100%;
   height: 300vh;
+  overflow: hidden;
 }
 .top{
   width: 7rem;
@@ -168,36 +171,175 @@
   left: -11.7%;
   margin-right: 10vw;
 }
-/* 카드1 */
-#project .container .cardwrap .card1{
+/* 카드 */
+#project .container .cardwrap .card{
   width: 50vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
   border-radius: 40px;
 }
-#project .container .cardwrap .card1 .project-img{
+#project .container .cardwrap .card .project-img{
   width: 40%;
   margin: 0 auto;
 }
-#project .container .cardwrap .card1 .project-text{
+#project .container .cardwrap .card .project-text{
   width: 40%;
 }
-#project .container .cardwrap .card1 .project-text h2{
+#project .container .cardwrap .card .project-text h2{
   font-size: 2.5rem;
 }
-#project .container .cardwrap .card1 .project-text h2:nth-of-type(2){
+#project .container .cardwrap .card .project-text h2:nth-of-type(2){
   margin-top: 2rem;
 }
-#project .container .cardwrap .card1 .project-text p{
+#project .container .cardwrap .card .project-text p{
   font-size: 2rem;
   margin-top: 2rem;
 }
-#project .container .cardwrap .card1 .project-text p:nth-of-type(3){
+#project .container .cardwrap .card .project-text p:nth-of-type(3){
   margin-top: 1rem;
 }
 
 
+
+
 #project .container .cardwrap .card5{
   margin-right: 0;
+}
+
+/* CONTACT영역 */
+
+#contact{
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  position: relative;
+}
+#contact h2{
+  color: #fff;
+  font-size: 7rem ;
+  text-align: center;
+  padding-top: 5rem;
+}
+#contact .contact-wrap {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* 왼쪽메일 */
+#contact .contact-wrap .mail{
+  width: 35%;
+  height: 100%;
+  
+}
+#contact .contact-wrap .mail>h3{
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#contact .contact-wrap .mail h3>i{
+  font-size: 4rem;
+}
+#contact .contact-wrap .mail .mailform{
+  width: 100%;
+  height: 100%;
+}
+#contact .contact-wrap .mail .mailform .gform{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#contact .contact-wrap .mail .mailform .gform input::placeholder,
+#contact .contact-wrap .mail .mailform .gform textarea::placeholder{
+  font-size: 1.8rem;
+  font-family: 'Roboto';
+  color: #fff;
+  padding-left: 1rem;
+}
+    
+#contact .contact-wrap .mail .mailform .gform input:focus,
+#contact .contact-wrap .mail .mailform .gform textarea:focus{
+  outline: none;
+}
+#contact .contact-wrap .mail .mailform .gform input:nth-child(1){
+  width: 100%;
+  height: 5rem;
+  box-sizing: border-box;
+  background-color: #555;
+  font-family: 'Roboto';
+  color: #fff;
+  outline: none;
+  border: none;
+}
+#contact .mail .mailform .gform input:nth-child(2){
+  width: 100%;
+  height: 5rem;
+  box-sizing: border-box;
+  background-color: #555;
+  font-family: 'Roboto';
+  color: #fff;
+  outline: none;
+  border: none;
+}
+#contact .contact-wrap .mail .mailform .gform textarea{
+  width: 100%;
+  height: 30rem;
+  box-sizing: border-box;
+  background-color: #555;
+  font-family: 'Roboto';
+  color: #fff;
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  resize: none;
+}
+#contact .contact-wrap .mail .mailform .gform button{
+  width: 30%;
+  height: 5rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  background-color: #555;
+  font-family: 'Roboto';
+  color: #fff;
+  font-size: 1.8rem;
+  
+}
+
+/* 우측 연락처 */
+#contact .contact-wrap .contact-list{
+  width: 25%;
+}
+
+#contact .contact-wrap .contact-list>h3{
+  color: #fff;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+#contact .contact-wrap .contact-list p{
+  color: #fff;
+  width: 50%;
+  font-size: 2rem;
+  display: flex;
+  padding-bottom: 2rem;
+  align-items: center;
+}
+#contact .contact-wrap .contact-list p>i{
+  width: 40px;
+  font-size: 3rem;
+  padding-right: 1rem;
+  text-align: center;
 }
