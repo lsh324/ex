@@ -25,7 +25,6 @@ function clickBtnNext(){
     slideList.style.transition = slideSpeed + 'ms';
     slideList.style.transform = 'translateX(-' + imageWidth*(curIndex+1) + 'vw)';
     curIndex++;
-    console.log(curIndex)
   }
   if( curIndex === slideLEN){
     //slide_list 위치 이동 : 이미지 첫번째가 보여지도록
@@ -34,7 +33,6 @@ function clickBtnNext(){
       slideList.style.transform = 'translateX(-' + 0 + 'vw)';
     },slideSpeed);
     curIndex = 0;
-    console.log(curIndex)
   }
 
 }
@@ -54,9 +52,12 @@ function clickBtnPrev(){
   if( curIndex >= 0 ){
     //translate를  이용해서 이동
     slideList.style.transition = slideSpeed + 'ms';
-    slideList.style.transform = 'translateX(-' + imageWidth*(curIndex-1) + 'vw)';
+    if (curIndex > 0)
+      slideList.style.transform = 'translateX(-' + imageWidth*(curIndex-1) + 'vw)';
+    else
+      slideList.style.transform = 'translateX(' + imageWidth + 'vw)';
+
     curIndex--;
-    console.log(curIndex)
 
   }
   if( curIndex === -1 ){
@@ -66,7 +67,6 @@ function clickBtnPrev(){
       slideList.style.transform = 'translateX(-' + imageWidth*(slideLEN-1) + 'vw)';
     },slideSpeed);
     curIndex = slideLEN-1;
-    console.log(curIndex)
   }
 
 }
