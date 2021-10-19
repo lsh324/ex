@@ -7,11 +7,25 @@
 
 const bodyObj = document.querySelector('#wrap');
 const panel = document.querySelectorAll('.panel');
+const navObj = document.querySelector('.nav');
 
 const panelLength = panel.length;
 let pageCount = 0;
 let scrollPosition = 0;
 
+const getMenuIndex = (target) =>{
+  for( let i=0 ; i < navObj.children.length ; i++){
+    if( navObj.children[i] === target){
+      return i;
+    }
+  }
+}
+
+navObj.addEventListener('click', function (e) {
+  if (e.target.tagName === 'A') {
+    pageCount = getMenuIndex(e.target) + 1;
+  }
+})
 bodyObj.addEventListener('wheel', function(e){
   e.preventDefault();
   // console.log(e.deltaY);
