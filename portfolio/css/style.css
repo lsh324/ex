@@ -1,12 +1,13 @@
 @charset "utf-8";
 html{
   scroll-behavior: smooth;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 #wrap{
   width: 100%;
   height: 300vh;
   overflow: hidden;
+  margin: 0 auto;
 }
 .top{
   width: 7rem;
@@ -74,17 +75,23 @@ html{
 }
 #main .header h2 a{
   color: #fff;
-  font-size: 40px;
+  font-size: 4rem;
+}
+#main .header nav{
+  display: flex;
+  align-items: center;
 }
 #main .header nav a{
   color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
   margin-left: 50px;
-  display: inline-block;
+}
+#main .header nav a:nth-child(3){
+  font-size: 4rem;
 }
 #main .header nav a:hover{
   transform: scale(1.2);
-  color: #ffffff;
+  color: rgb(221, 169, 49);
 }
 /* 메인-배너 */
 #main .banner{
@@ -94,7 +101,7 @@ html{
 }
 #main .banner h1{
   color: #fff;
-  font-size: 8rem;
+  font-size:8rem;
 }
 #main .banner h3{
   color: rgba(255, 255, 255, 0.8);
@@ -128,7 +135,8 @@ html{
   width: 100vw;
   height: 100vh;
   /* background-color: rgb(44, 44, 44); */
-  background: linear-gradient(180deg, #020217, #0e1033);
+  background: linear-gradient(180deg, #393a4d, #0e1033);
+  
 }
 #project>h2{
   color: #fff;
@@ -138,12 +146,12 @@ html{
 }
 #project .container{
   width: 100%;
-  height: 65rem;
+  height: 80vh;
   position: relative;
 }
 #project .container .button{
   width: 64vw;
-  height: 65rem;
+  height: 20vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -160,31 +168,28 @@ html{
 /* project - card */
 #project .container .cardwrap{
   /* width: 300vw; */
-  height: 65rem;
+  height: 80vh;
   position: absolute;
   display: flex;
 }
 #project .container .cardwrap .card{
   width: 50vw;
-  height: 50rem;
+  height: 60vh;
   background-color: #fff ;
-  border-radius: 40px;
+  border-radius: 4rem;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
   position: relative;
   top: 10vh;
-  left: 8.4%;
+  left: 8.6%;
   /* left: -11.4%; */
   margin-right: 10vw;
-}
-/* 카드 */
-#project .container .cardwrap .card{
-  width: 50vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
   border-radius: 40px;
   opacity: 0.4;
 }
+/* 카드 */
 #project .container .cardwrap .card.on{
   opacity: 1;
 }
@@ -198,19 +203,33 @@ html{
 #project .container .cardwrap .card .project-text h2{
   font-size: 2.5rem;
 }
-#project .container .cardwrap .card .project-text h2:nth-of-type(2){
-  margin-top: 2rem;
+#project .container .cardwrap .card .project-text p:nth-child(4){
+  display: flex;
+  align-items: center;
+}
+#project .container .cardwrap .card .project-text p:nth-child(4) span{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+#project .container .cardwrap .card .project-text p:nth-child(4) span:nth-child(2){
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+#project .container .cardwrap .card .project-text p:nth-child(5){
+  margin-top: 3rem;
+}
+#project .container .cardwrap .card .project-text p:nth-child(5) a{
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(221, 169, 49);
+  cursor: pointer;
 }
 #project .container .cardwrap .card .project-text p{
   font-size: 2rem;
   margin-top: 2rem;
 }
-#project .container .cardwrap .card .project-text p:nth-of-type(3){
-  margin-top: 1rem;
-}
-
-
-
 
 #project .container .cardwrap .card5{
   margin-right: 0;
@@ -222,7 +241,7 @@ html{
   width: 100%;
   height: 100vh;
   /* background-color: #222; */
-  background: linear-gradient(180deg, #0e1033,#393a4d);
+  background: linear-gradient(180deg, #0e1033, #020217);
   position: relative;
 }
 #contact h2{
@@ -233,7 +252,7 @@ html{
 }
 #contact .contact-wrap {
   width: 100%;
-  height: 500px;
+  height: 60vh;
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
@@ -359,4 +378,26 @@ html{
   color: #fff;
   font-size: 1.8rem;
   
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  html{
+    font-size: 7px;
+  }
+  #project .container .button{
+    width: 80vw;
+  }
+  #project .container .cardwrap .card{
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    }
+  #project .container .cardwrap .card .project-img{
+    width: 60%;
+    padding-bottom: 2rem;
+  }
+  #project .container .cardwrap .card .project-text{
+    width: auto;
+    
+  }
 }

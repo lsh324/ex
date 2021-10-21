@@ -8,8 +8,6 @@ const panelLength = panel.length;
 let pageCount = 0;
 let scrollPosition = 0;
 
-
-
 const getMenuIndex = (target) =>{
   for( let i=0 ; i < navObj.children.length ; i++){
     if( navObj.children[i] === target){
@@ -18,11 +16,12 @@ const getMenuIndex = (target) =>{
   }
 }
 
-
+topObj.addEventListener('click', init);
 
 navObj.addEventListener('click', function (e) {
   if (e.target.tagName === 'A') {
     pageCount = getMenuIndex(e.target) + 1;
+    topObj.style.opacity = 1;
   }
 });
 bodyObj.addEventListener('wheel', function(e){
@@ -51,13 +50,17 @@ bodyObj.addEventListener('wheel', function(e){
   scrollPosition = pageCount * window.innerHeight;
   window.scrollTo({left:0, top:scrollPosition, behavior:"smooth"});
 }, {passive:false});
+
 function init(){
-  console.log('init funcion');
   pageCount = 0;
   scrollPosition = 0;
-  window.scrollTo(0,0);
+  setTimeout( function(){
+    window.scrollTo(0,0);
+  });
+  
   topObj.style.opacity = 0;
   // console.log("current =", pageCount);
 }
 window.addEventListener('beforeunload', init);
-init();
+window.addEventListener('load', init);
+// init();
