@@ -9,66 +9,34 @@ const slideLEN = slideObj.length;
 let curIndex = 0;
 
 function clickBtnNext(){
-  // if(curIndex >= slideLEN-1) {
-  //   curIndex = slideLEN-1;
-  // }
-  //   curIndex++;
-  //   btnPrev.removeAttribute('disabled');
-  //   slideList.style.transition = '300ms';
-  //   slideList.style.transform = 'translateX(-' + (imageWidth *curIndex+1) + 'vw)';
-
-  // if(curIndex === slideLEN-1){
-  //   btnNext.setAttribute('disabled', 'true');
-  // }
-
-  if( curIndex < slideLEN ){
-    slideList.style.transition = slideSpeed + 'ms';
-    slideList.style.transform = 'translateX(-' + imageWidth*(curIndex+1) + 'vw)';
-    curIndex++;
+  curIndex++;
+  if(curIndex > slideLEN-1) {
+    curIndex = slideLEN-1;
+  }  
+    btnPrev.style.color = 'rgba(255, 255, 255, 0.8)';
+    slideObj[curIndex].classList.add('on');
+    slideObj[curIndex-1].classList.remove('on');
+    slideList.style.transition = '300ms';
+    slideList.style.transform = 'translateX(-' + (imageWidth *curIndex+1) + 'vw)';
+  if(curIndex === slideLEN-1){
+    btnNext.style.color = 'rgba(255, 255, 255, 0.3)';
   }
-  if( curIndex === slideLEN){
-    //slide_list 위치 이동 : 이미지 첫번째가 보여지도록
-    setTimeout(function(){
-      slideList.style.transition = '0ms';
-      slideList.style.transform = 'translateX(-' + 0 + 'vw)';
-    },slideSpeed);
-    curIndex = 0;
-  }
-
 }
 
 function clickBtnPrev(){
-//   curIndex--;
-//   if(curIndex < 0) {
-//     curIndex = 0;
-//   }
-//     btnNext.removeAttribute('disabled');
-//     slideList.style.transform = '300ms';
-//     slideList.style.transform = 'translateX(-' + (imageWidth * curIndex+1) +'vw)';
-
-// if(curIndex === 0){
-//   btnPrev.setAttribute('disabled','true');
-// }
-  if( curIndex >= 0 ){
-    //translate를  이용해서 이동
-    slideList.style.transition = slideSpeed + 'ms';
-    if (curIndex > 0)
-      slideList.style.transform = 'translateX(-' + imageWidth*(curIndex-1) + 'vw)';
-    else
-      slideList.style.transform = 'translateX(' + imageWidth + 'vw)';
-
-    curIndex--;
-
+  curIndex--;
+  if(curIndex < 0) {
+    curIndex = 0;
   }
-  if( curIndex === -1 ){
-    //slide_list 위치 이동 : 이미지 마지막이 보여지도록
-    setTimeout(function(){
-      slideList.style.transition = '0ms';
-      slideList.style.transform = 'translateX(-' + imageWidth*(slideLEN-1) + 'vw)';
-    },slideSpeed);
-    curIndex = slideLEN-1;
-  }
+    btnNext.style.color = 'rgba(255, 255, 255, 0.8)';
+    slideObj[curIndex].classList.add('on');
+    slideObj[curIndex+1].classList.remove('on');
+    slideList.style.transform = '300ms';
+    slideList.style.transform = 'translateX(-' + (imageWidth * curIndex+1) +'vw)';
 
+if(curIndex === 0){
+  btnPrev.style.color = 'rgba(255, 255, 255, 0.3)';
+  }
 }
 
 // 버튼의 이벤트 처리
@@ -82,6 +50,8 @@ function init(){
   //slide_list width 설정
   slideList.style.width = (imageWidth * slideLEN) + 'vw';
   slideList.style.transform = 'translate(0px)';
+  btnPrev.style.color = 'rgba(255, 255, 255, 0.3)';
+  slideObj[curIndex].classList.add('on');
 }
 
 init();
