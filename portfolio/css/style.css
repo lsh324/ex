@@ -31,7 +31,7 @@ html{
 
 /* 메인영역 */
 #main{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
 }
@@ -43,7 +43,7 @@ html{
 }
 
 #main .main-bg{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   /* overflow: hidden;
   position: fixed; */
@@ -60,13 +60,13 @@ html{
   left: 0;
 } */
 #main .main-bg video{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
 }
 /* 메인 - 헤더 */
 #main .header{
-  width: 100%;
+  width: 100vw;
   height: 12rem;
   padding: 5rem;
   display: flex;
@@ -83,8 +83,8 @@ html{
 }
 #main .header nav a{
   color: rgba(255, 255, 255, 0.9);
-  font-size: 20px;
-  margin-left: 50px;
+  font-size: 2rem;
+  padding-left: 5rem;
 }
 #main .header nav a:nth-child(3){
   font-size: 4rem;
@@ -180,13 +180,14 @@ html{
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
   position: relative;
   top: 10vh;
-  left: 8.6%;
+  left: 0;
+  /* left: 8.4%; */
   /* left: -11.4%; */
   margin-right: 10vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   opacity: 0.4;
 }
 /* 카드 */
@@ -258,7 +259,7 @@ html{
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
 }
 
@@ -266,6 +267,7 @@ html{
 /* 연락처 */
 #contact .contact-wrap .contact-list{
   width: 25%;
+  /* padding-right: 20px; */
 }
 
 #contact .contact-wrap .contact-list>h3{
@@ -275,7 +277,7 @@ html{
 }
 #contact .contact-wrap .contact-list p{
   color: #fff;
-  width: 65%;
+  width: 90%;
   font-size: 2.5rem;
   display: flex;
   padding-bottom: 3rem;
@@ -294,19 +296,7 @@ html{
   height: 100%;
   
 }
-#contact .contact-wrap .mail>h3{
-  width: 100%;
-  height: 100px;
-  color: #fff;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#contact .contact-wrap .mail h3>i{
-  font-size: 4rem;
-  padding-right: 1rem;
-}
+
 #contact .contact-wrap .mail .mailform{
   width: 100%;
   height: 100%;
@@ -318,7 +308,7 @@ html{
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-end;
 }
 #contact .contact-wrap .mail .mailform .gform input::placeholder,
@@ -335,7 +325,7 @@ html{
 }
 #contact .contact-wrap .mail .mailform .gform input:nth-child(1){
   width: 100%;
-  height: 5rem;
+  height: 50px;
   box-sizing: border-box;
   background-color: #555;
   font-family: 'Roboto';
@@ -346,7 +336,7 @@ html{
 }
 #contact .mail .mailform .gform input:nth-child(2){
   width: 100%;
-  height: 5rem;
+  height: 50px;
   box-sizing: border-box;
   background-color: #555;
   font-family: 'Roboto';
@@ -357,7 +347,7 @@ html{
 }
 #contact .contact-wrap .mail .mailform .gform textarea{
   width: 100%;
-  height: 30rem;
+  height: 300px;
   box-sizing: border-box;
   background-color: #555;
   font-family: 'Roboto';
@@ -370,7 +360,7 @@ html{
 }
 #contact .contact-wrap .mail .mailform .gform button{
   width: 30%;
-  height: 5rem;
+  height: 50px;
   box-sizing: border-box;
   background-color: #fff;
   background-color: #555;
@@ -379,7 +369,13 @@ html{
   font-size: 1.8rem;
   
 }
-
+/* 반응형 1024~1439 */
+@media screen and (min-width:1024px) and (max-width:1439px) {
+  html{
+    font-size: 7.5px;
+  }
+}
+/* 반응형 태블릿 */
 @media screen and (min-width:768px) and (max-width:1023px) {
   html{
     font-size: 7px;
@@ -399,5 +395,50 @@ html{
   #project .container .cardwrap .card .project-text{
     width: auto;
     
+  }
+}
+/* 반응형 -모바일 */
+@media screen and (min-width:425px) and (max-width:767px) {
+  html{
+    font-size: 7px;
+  }
+  #main .header nav a{
+    padding-left: 3rem;
+  }
+  #project .container .button{
+    width: 95vw;
+  }
+  #project .container .cardwrap .card{
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    width: 65vw;
+    left: 4.8%;
+    }
+  #project .container .cardwrap .card .project-img{
+    width: 60%;
+    padding-bottom: 2rem;
+  }
+  #project .container .cardwrap .card .project-text{
+    width: auto;
+  }
+  #contact .contact-wrap{
+    top: 20rem;
+    transform: none;
+    height: 80vh;
+    flex-direction: column;
+  }
+  #contact .contact-wrap .contact-list{
+    width: 100%;
+  }
+  #contact .contact-wrap .contact-list h3{
+    display: none;
+  }
+  #contact .contact-wrap .contact-list p{
+    width: 100%;
+    justify-content: center;
+  }
+  #contact .contact-wrap .mail{
+    width: 60%;
   }
 }
