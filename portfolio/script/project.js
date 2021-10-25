@@ -1,11 +1,16 @@
 const slideSpeed = 200;
 const slideList = document.querySelector('.cardwrap');
 const slideObj = document.querySelectorAll('.card');
+let imageWidth = document.querySelector('.card').offsetWidth + (document.body.scrollWidth * 0.1);
+slideList.style.left = (document.body.offsetWidth - document.querySelector('.card').offsetWidth)*0.5 + 'px';
+
 // const imageWidth = (document.querySelector('.card').offsetWidth/document.body.scrollWidth) * 100;
-const imageWidth = document.querySelector('.card').offsetWidth + (document.body.scrollWidth * 0.1);
 
+const resizeEvent = () => {
+  imageWidth = document.querySelector('.card').offsetWidth + (document.body.scrollWidth * 0.1);
+  slideList.style.left = (document.body.offsetWidth - document.querySelector('.card').offsetWidth)*0.5 + 'px';
+}
 
-slideList.style.left = document.querySelector('.card').offsetWidth *0.5 + 'px';
   // document.querySelector('.card').offsetWidth + (document.body.scrollWidth * 0.1)
 //left값
 
@@ -52,6 +57,7 @@ if(curIndex === 0){
 function btnEvent(){
   btnPrev.addEventListener('click', clickBtnPrev );
   btnNext.addEventListener('click', clickBtnNext );
+  window.addEventListener('resize', resizeEvent);
 }
 
 function init(){
