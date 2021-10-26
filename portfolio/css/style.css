@@ -233,7 +233,7 @@ html{
 }
 
 #project .container .cardwrap .card5{
-  /*margin-right: 0;*/
+  margin-right: 0;
 }
 
 /* CONTACT영역 */
@@ -387,6 +387,7 @@ html{
     flex-direction: column;
     justify-content: center;
     opacity: 0;
+    height: 70vh;
     }
   #project .container .cardwrap .card .project-img{
     width: 60%;
@@ -413,7 +414,7 @@ html{
     justify-content: center;
     opacity: 0;
     width: 65vw;
-    left: 4.8%;
+    height: 70vh;
     }
   #project .container .cardwrap .card .project-img{
     width: 60%;
@@ -440,5 +441,6 @@ html{
   }
   #contact .contact-wrap .mail{
     width: 60%;
+    height: 80%;
   }
 }

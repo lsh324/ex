@@ -10,9 +10,7 @@ const resizeEvent = () => {
   imageWidth = document.querySelector('.card').offsetWidth + (document.body.scrollWidth * 0.1);
   slideList.style.left = (document.body.offsetWidth - document.querySelector('.card').offsetWidth)*0.5 + 'px';
 }
-
-  // document.querySelector('.card').offsetWidth + (document.body.scrollWidth * 0.1)
-//left값
+resizeEvent();
 
 // slideList.style.left = cardWidth * 0.5;
 const btnPrev = document.querySelector('.slide-btn-prev');
