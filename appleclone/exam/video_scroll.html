@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video scroll</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 500vh;
+      }
+      body.before-load {
+        overflow-y: hidden;
+      }
+      .sample-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="before-load">
+    <video class="sample-video" src="../images/Green.mp4" muted></video>
+
+    <script>
+      const videoElem = document.querySelector('.sample-video');
+      let progress=0;
+
+      const init = ()=>{
+          document.body.classList.remove('before-load');
+
+          window.addEventListener('scroll',()=>{
+              progress = window.pageYOffset / (document.body.offsetHeight-window.innerHeight);
+            //   console.log( progress );
+            videoElem.currentTime = videoElem.duration * progress;
+         })
+      }
+      videoElem.addEventListener('loadeddata',()=>{
+          console.log( '비디오 로드 완료');
+          init();
+      });
+    </script>
+  </body>
+</html>

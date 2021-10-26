@@ -1,0 +1,135 @@
+@charset 'utf-8';
+
+/* font family 설정 8*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;    
+}
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.video_frame video{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.video_frame::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(-135deg, blue, transparent);
+}
+.logo{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.contents{
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    width: 500px;
+    color: #fff;
+    animation: showing-left 2s linear;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+.contents h1{
+    font-size: 3rem;    
+}
+.contents h1 span:nth-child(1){
+    color: crimson;
+}
+.contents p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.btn-book,
+.btn-learn{
+    background-color: #fff;
+    color: #222;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 150px;  
+    padding: 7px;  
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #fff;
+}
+.btn-learn{
+    color: #fff;
+    background-color: transparent;
+    
+}
+.btn-book:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: transparent;
+}
+.btn-learn:hover{
+    background-color: #fff;
+    color: #000;
+}
+.anniversary{
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+    text-align: center;
+    animation: showing-right 2s linear;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+.anniversary p{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3.5px;
+    margin-bottom: -25px;    
+}
+.anniversary span{
+    font-family: 'Monoton', cursive;
+    font-size: 150px;
+}
+
+@keyframes showing-left {
+    0%{
+        opacity: 0;
+        margin-left: -100px;
+    }
+    100%{
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+@keyframes showing-right {
+    0%{
+        opacity: 0;
+        margin-right: -100px;
+    }
+    100%{
+        opacity: 1;
+        margin-right: 0;
+    }
+}
