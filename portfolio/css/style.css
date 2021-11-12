@@ -8,6 +8,7 @@ html{
   height: 300vh;
   overflow: hidden;
   margin: 0 auto;
+  transition: 1s;
 }
 .top{
   width: 7rem;
